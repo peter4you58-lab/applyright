@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ApplyRight — We write the CV. We send the application. You take the interview.</title>
+<meta name="description" content="Done-for-you job applications for candidates in the UK, US and Canada. We build a tailored CV and cover letter for every role, submit it, and track every single one in a live sheet you can open. $5 per application.">
+<meta property="og:title" content="ApplyRight — Done-for-you job applications">
+<meta property="og:description" content="Tailored CV, fresh cover letter, submitted for you, and every application tracked in a sheet you can open. $5 each.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0F1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#070B12;
+  --night:#0A0F1A;
+  --card:#111827;
+  --card2:#161F30;
+  --line:#243147;
+  --mist:#93A2B8;
+  --chalk:#E9EEF6;
+  --white:#FFFFFF;
+  --gold:#F5A524;
+  --gold-dim:#8A5E12;
+  --green:#3BC47E;
+
+  --display:"Anton",Impact,sans-serif;
+  --body:"Manrope",-apple-system,system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+
+  --gut:clamp(18px,4.5vw,60px);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--night);color:var(--chalk);
+  font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);
+}
+h2{
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(32px,4.6vw,56px);line-height:.96;letter-spacing:.005em;
+  margin:14px 0 16px;
+}
+h2 em{font-style:normal;color:var(--gold)}
+.sec-lede{color:var(--mist);max-width:60ch;font-size:17px}
+section{padding:clamp(60px,8vw,110px) 0;position:relative}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--gold);color:#1A1204;border:none;border-radius:999px;
+  padding:13px 24px;cursor:pointer;text-decoration:none;
+  font-family:var(--body);font-size:15px;font-weight:800;letter-spacing:.01em;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(245,165,36,.6)}
+.btn-ghost{background:transparent;color:var(--chalk);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:none}
+.btn-wa{background:#25D366;color:#04240F}
+.btn-wa:hover{box-shadow:0 12px 30px -10px rgba(37,211,102,.6)}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(10,15,26,.86);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}
+.logo{
+  font-family:var(--display);font-size:24px;letter-spacing:.02em;text-transform:uppercase;
+  text-decoration:none;display:flex;align-items:center;gap:8px;
+}
+.logo b{color:var(--gold);font-weight:400}
+.tick{width:9px;height:9px;background:var(--gold);border-radius:2px;transform:rotate(45deg)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:14.5px;font-weight:600;color:var(--mist);text-decoration:none}
+.nav-links a:hover{color:var(--white)}
+@media(max-width:900px){.nav-links a:not(.btn){display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(44px,6vw,84px) 0 clamp(50px,6vw,80px);position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-30%;right:-10%;width:70vw;height:70vw;
+  background:radial-gradient(circle,rgba(245,165,36,.13),transparent 62%);
+  pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:clamp(30px,4vw,56px);align-items:center;position:relative}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
+h1{
+  font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(42px,6.3vw,80px);line-height:.9;letter-spacing:.004em;
+  margin:16px 0 20px;
+}
+h1 em{font-style:normal;color:var(--gold);display:block}
+.lede{color:var(--mist);font-size:clamp(16.5px,1.5vw,19px);max-width:48ch}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trustline{
+  display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;
+  font-family:var(--mono);font-size:11.5px;color:var(--mist);letter-spacing:.06em;
+}
+.trustline span{display:flex;align-items:center;gap:7px}
+.trustline i{width:5px;height:5px;background:var(--green);border-radius:50%;font-style:normal}
+
+/* ---------- signature: the tracker ---------- */
+.sheet{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  box-shadow:0 40px 80px -40px #000, 0 0 0 1px rgba(245,165,36,.08);
+}
+.sheet-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:11px 14px;background:var(--card2);border-bottom:1px solid var(--line);
+}
+.sheet-name{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--chalk);display:flex;align-items:center;gap:8px}
+.live{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--green);
+  display:flex;align-items:center;gap:6px;text-transform:uppercase;
+}
+.blip{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.sheet-scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+thead th{
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--gold);text-align:left;padding:10px 12px;background:#0D1522;
+  border-bottom:1px solid var(--line);white-space:nowrap;position:sticky;top:0;
+}
+tbody td{
+  padding:11px 12px;font-size:13px;border-bottom:1px solid rgba(36,49,71,.6);
+  white-space:nowrap;color:var(--chalk);
+}
+tbody td.dim{color:var(--mist);font-family:var(--mono);font-size:11.5px}
+tbody td a{color:#7FB2FF;text-decoration:none;font-family:var(--mono);font-size:11.5px}
+tbody td a:hover{text-decoration:underline}
+tbody tr{opacity:0;animation:slide .45s ease forwards}
+@keyframes slide{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+tbody tr:nth-child(1){animation-delay:.1s}tbody tr:nth-child(2){animation-delay:.22s}
+tbody tr:nth-child(3){animation-delay:.34s}tbody tr:nth-child(4){animation-delay:.46s}
+tbody tr:nth-child(5){animation-delay:.58s}tbody tr:nth-child(6){animation-delay:.7s}
+tbody tr:nth-child(7){animation-delay:.82s}tbody tr:nth-child(8){animation-delay:.94s}
+.pill{
+  font-family:var(--mono);font-size:10px;padding:3px 8px;border-radius:999px;
+  background:rgba(59,196,126,.13);color:var(--green);border:1px solid rgba(59,196,126,.3);
+}
+.sheet-foot{
+  padding:10px 14px;background:var(--card2);border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:10.5px;color:var(--mist);
+}
+
+/* ---------- marquee ---------- */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--void);padding:14px 0;overflow:hidden;white-space:nowrap;
+}
+.marquee-track{display:inline-flex;gap:40px;animation:roll 38s linear infinite;will-change:transform}
+.marquee span{
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);
+  display:inline-flex;align-items:center;gap:40px;
+}
+.marquee span::after{content:"✦";color:var(--gold-dim)}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- included ---------- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 22px;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.card .ico{
+  width:34px;height:34px;border-radius:8px;background:rgba(245,165,36,.12);
+  display:grid;place-items:center;color:var(--gold);font-family:var(--mono);font-size:15px;font-weight:700;
+  margin-bottom:14px;
+}
+.card h3{font-size:17.5px;font-weight:800;margin-bottom:7px;letter-spacing:-.01em}
+.card p{font-size:14.5px;color:var(--mist)}
+
+/* ---------- tracker feature ---------- */
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center}
+@media(max-width:960px){.split{grid-template-columns:1fr}}
+.colspec{list-style:none;margin-top:26px;border-top:1px solid var(--line)}
+.colspec li{
+  display:grid;grid-template-columns:170px 1fr;gap:16px;align-items:baseline;
+  padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--mist);
+}
+@media(max-width:520px){.colspec li{grid-template-columns:1fr;gap:2px}}
+.colspec b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+@media(max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding-top:22px;border-top:2px solid var(--line)}
+.step.you{border-top-color:var(--gold)}
+.step .n{font-family:var(--display);font-size:38px;color:var(--line);line-height:1;display:block;margin-bottom:8px}
+.step.you .n{color:var(--gold)}
+.step h3{font-size:18px;font-weight:800;margin-bottom:7px}
+.step p{font-size:14.5px;color:var(--mist)}
+.step .who{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+.step.you .who{color:var(--gold)}
+
+/* ---------- pricing ---------- */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px;align-items:stretch}
+@media(max-width:900px){.prices{grid-template-columns:1fr}}
+.price{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:30px 26px;display:flex;flex-direction:column;position:relative;
+}
+.price.best{
+  background:linear-gradient(170deg,#1B2233,var(--card));
+  border-color:var(--gold);box-shadow:0 30px 70px -40px rgba(245,165,36,.5);
+}
+.flag{
+  position:absolute;top:-11px;left:26px;background:var(--gold);color:#1A1204;
+  font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;
+  padding:4px 11px;border-radius:999px;text-transform:uppercase;
+}
+.tier{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+.amt{font-family:var(--display);font-size:58px;line-height:1;letter-spacing:.01em;margin:14px 0 4px}
+.price.best .amt{color:var(--gold)}
+.per{font-size:13.5px;color:var(--mist);font-family:var(--mono)}
+.plist{list-style:none;margin:22px 0 26px;font-size:14.5px;color:var(--mist)}
+.plist li{padding-left:24px;position:relative;margin-bottom:9px}
+.plist li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+.price .btn{margin-top:auto;justify-content:center}
+.fine{margin-top:24px;font-size:14px;color:var(--mist);max-width:70ch}
+
+/* ---------- stories ---------- */
+.stories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:960px){.stories{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.stories{grid-template-columns:1fr}}
+.story{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.story .shot{background:var(--card2);border-bottom:1px solid var(--line);aspect-ratio:16/9;object-fit:cover;width:100%}
+.story .noshot{
+  aspect-ratio:16/9;display:grid;place-items:center;background:
+    repeating-linear-gradient(45deg,#131C2C 0 8px,#111827 8px 16px);
+  border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--mist);text-transform:uppercase;
+}
+.story-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.story .win{font-family:var(--display);font-size:24px;color:var(--gold);line-height:1.05;text-transform:uppercase}
+.story .q{font-size:14.5px;color:var(--chalk)}
+.story .who{font-family:var(--mono);font-size:11px;color:var(--mist);margin-top:auto;padding-top:8px;border-top:1px solid var(--line)}
+.placeholder-note{
+  margin-top:26px;padding:14px 16px;border:1px dashed var(--gold-dim);border-radius:8px;
+  font-family:var(--mono);font-size:12px;color:var(--mist);
+}
+
+/* ---------- reviews ---------- */
+.rate-head{
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:36px;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;
+}
+.big-score{font-family:var(--display);font-size:64px;line-height:1;color:var(--gold)}
+.stars{letter-spacing:.16em;font-size:19px;color:var(--gold)}
+.stars .off{color:var(--line)}
+.rate-meta{font-family:var(--mono);font-size:11.5px;color:var(--mist);letter-spacing:.08em;text-transform:uppercase}
+.rate-head .btn{margin-left:auto}
+@media(max-width:640px){.rate-head .btn{margin-left:0}}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+@media(max-width:960px){.reviews{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.reviews{grid-template-columns:1fr}}
+.review{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.review .stars{font-size:14px;margin-bottom:10px}
+.review p{font-size:14.5px;color:var(--chalk)}
+.review .by{font-family:var(--mono);font-size:11px;color:var(--mist);margin-top:14px}
+.empty{
+  border:1px dashed var(--line);border-radius:12px;padding:40px;text-align:center;
+  color:var(--mist);font-family:var(--mono);font-size:13px;
+}
+
+/* ---------- team ---------- */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:1000px){.team{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.team{grid-template-columns:1fr}}
+.person{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;
+  display:flex;flex-direction:column;gap:4px;transition:border-color .2s ease;
+}
+.person:hover{border-color:var(--gold)}
+.avatar{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(245,165,36,.12);color:var(--gold);
+  font-family:var(--display);font-size:19px;margin-bottom:12px;
+}
+.person .role{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+.person h3{font-size:19px;font-weight:800;letter-spacing:-.01em}
+.person .does{font-size:13.5px;color:var(--mist);margin:8px 0 16px}
+.person .num{font-family:var(--mono);font-size:12.5px;color:var(--chalk);text-decoration:none;display:block;margin-bottom:10px}
+.person .num:hover{color:var(--gold)}
+.person .btn{margin-top:auto;font-size:13px;padding:9px 16px;justify-content:center}
+
+/* ---------- forms ---------- */
+.formcard{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,36px);
+  margin-top:38px;
+}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.fgrid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
+input,select,textarea{
+  font-family:var(--body);font-size:16px;color:var(--chalk);background:var(--night);
+  border:1px solid var(--line);border-radius:8px;padding:12px 14px;width:100%;
+}
+input::placeholder,textarea::placeholder{color:#5A6A82}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px rgba(245,165,36,.16)}
+textarea{resize:vertical;min-height:100px}
+.fform{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.fmsg{font-size:13.5px;color:var(--mist)}
+.fmsg.bad{color:#FF6B6B}
+.starpick{display:flex;gap:6px}
+.starpick button{
+  background:none;border:none;cursor:pointer;font-size:26px;color:var(--line);
+  padding:0 2px;line-height:1;transition:color .12s ease,transform .12s ease;
+}
+.starpick button:hover{transform:scale(1.15)}
+.starpick button.on{color:var(--gold)}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{
+  font-size:18px;font-weight:800;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:18px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--gold);font-size:22px;flex:none}
+details[open] summary::after{content:"−"}
+details p{margin-top:11px;color:var(--mist);font-size:15px;max-width:74ch}
+
+/* ---------- footer ---------- */
+footer{background:var(--void);border-top:1px solid var(--line);padding:56px 0 0}
+.fgridf{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;padding-bottom:40px}
+@media(max-width:800px){.fgridf{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.fgridf{grid-template-columns:1fr}}
+footer h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+footer a{color:var(--mist);text-decoration:none;display:block;font-size:14.5px;margin-bottom:9px}
+footer a:hover{color:var(--white)}
+.footlogo{font-family:var(--display);font-size:30px;text-transform:uppercase;color:var(--white);margin-bottom:10px}
+.footbar{
+  border-top:1px solid var(--line);padding:18px 0;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:#5A6A82;
+}
+.wafloat{
+  position:fixed;right:18px;bottom:18px;z-index:70;
+  width:56px;height:56px;border-radius:50%;background:#25D366;
+  display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);
+  text-decoration:none;transition:transform .16s ease;
+}
+.wafloat:hover{transform:scale(1.08)}
+.wafloat svg{width:30px;height:30px;fill:#04240F}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  tbody tr{opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><span class="tick"></span>Apply<b>Right</b></a>
+    <nav class="nav-links">
+      <a href="#tracker">The tracker</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#stories">Success stories</a>
+      <a href="#team">Team</a>
+      <a class="btn" href="#start">Send your CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">United Kingdom · United States · Canada</p>
+      <h1>We write it.<br>We send it.<em>You interview.</em></h1>
+      <p class="lede">You shouldn't be spending your evenings rewriting the same CV for the hundredth posting. Send it to us once. We build a fresh CV and cover letter for every single role, submit it ourselves, and log it in a tracking sheet you can open any time.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#start">Send your CV →</a>
+        <a class="btn btn-ghost" href="#tracker">See the tracker</a>
+      </div>
+      <div class="trustline">
+        <span><i></i>$5 per application</span>
+        <span><i></i>No subscription</span>
+        <span><i></i>Every application logged</span>
+      </div>
+    </div>
+
+    <!-- SIGNATURE: the live tracker -->
+    <div class="sheet" aria-label="Example of the ApplyRight tracking sheet">
+      <div class="sheet-bar">
+        <span class="sheet-name">📋 Client_Tracker.xlsx — Sheet1</span>
+        <span class="live"><span class="blip"></span>Updated today</span>
+      </div>
+      <div class="sheet-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Job title</th><th>Company</th><th>Date</th><th>CV used</th><th>Cover letter</th><th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Agile Delivery Lead</td><td class="dim">Tarka</td><td class="dim">19/06</td><td><a href="#tracker">CV_v14.pdf</a></td><td><a href="#tracker">CL_tarka.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Delivery Manager</td><td class="dim">Orion</td><td class="dim">19/06</td><td><a href="#tracker">CV_v15.pdf</a></td><td><a href="#tracker">CL_orion.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Delivery Lead</td><td class="dim">Sainsbury's</td><td class="dim">19/06</td><td><a href="#tracker">CV_v16.pdf</a></td><td><a href="#tracker">CL_sains.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Portfolio Delivery Mgr</td><td class="dim">Specsavers</td><td class="dim">20/06</td><td><a href="#tracker">CV_v17.pdf</a></td><td><a href="#tracker">CL_specs.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Change Manager</td><td class="dim">Broadridge</td><td class="dim">21/06</td><td><a href="#tracker">CV_v18.pdf</a></td><td><a href="#tracker">CL_broad.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Delivery Consultant</td><td class="dim">Experis</td><td class="dim">21/06</td><td><a href="#tracker">CV_v19.pdf</a></td><td><a href="#tracker">CL_exper.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>AI Team Manager</td><td class="dim">Flutter</td><td class="dim">21/06</td><td><a href="#tracker">CV_v20.pdf</a></td><td><a href="#tracker">CL_flutt.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+            <tr><td>Scrum Master</td><td class="dim">Northrop</td><td class="dim">22/06</td><td><a href="#tracker">CV_v21.pdf</a></td><td><a href="#tracker">CL_north.pdf</a></td><td><span class="pill">SENT</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sheet-foot">Illustrative example of a client sheet. Names and links are not real client data.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Delivery Manager</span><span>Scrum Master</span><span>Agile Coach</span><span>Project Manager</span><span>Cloud Engineer</span><span>Change Manager</span><span>Programme Lead</span><span>Business Analyst</span><span>Product Owner</span><span>DevOps Engineer</span>
+    <span>Delivery Manager</span><span>Scrum Master</span><span>Agile Coach</span><span>Project Manager</span><span>Cloud Engineer</span><span>Change Manager</span><span>Programme Lead</span><span>Business Analyst</span><span>Product Owner</span><span>DevOps Engineer</span>
+  </div>
+</div>
+
+<!-- ===== INCLUDED ===== -->
+<section id="included">
+  <div class="wrap">
+    <p class="eyebrow">What $5 buys</p>
+    <h2>Four things happen<br>for <em>every single role</em></h2>
+    <p class="sec-lede">Not a vague subscription with "support." A fixed unit of work, done per role, that you can count and verify.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">01</div>
+        <h3>A CV built for that role</h3>
+        <p>We write it ourselves against the actual job description and its keywords — not a template with words swapped. Every claim stays true to your real experience.</p>
+      </div>
+      <div class="card">
+        <div class="ico">02</div>
+        <h3>A cover letter written fresh</h3>
+        <p>Specific to that company and that posting. Screeners and hiring managers can spot a reused letter instantly, so we don't send them one.</p>
+      </div>
+      <div class="card">
+        <div class="ico">03</div>
+        <h3>The application submitted</h3>
+        <p>We complete the employer's portal or job board form for you — including the long questions most applicants leave blank or rush.</p>
+      </div>
+      <div class="card">
+        <div class="ico">04</div>
+        <h3>The row added to your sheet</h3>
+        <p>Company, role, date, the exact CV used and the exact cover letter used — linked, so you can open either one years later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== TRACKER FEATURE ===== -->
+<section id="tracker">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">The difference</p>
+      <h2>Every application<br>has a <em>receipt</em></h2>
+      <p class="sec-lede">Most application services ask you to take their word for it. We keep a live sheet for each client — the same one we work from — and you get access to it. Nothing is claimed that isn't in a row.</p>
+      <ul class="colspec">
+        <li><b>Name</b><span>The candidate the application went out for.</span></li>
+        <li><b>Job</b><span>The exact title as advertised, not a summary of it.</span></li>
+        <li><b>Date</b><span>The day it was submitted, so you can match it to the employer's own confirmation email.</span></li>
+        <li><b>Resume used</b><span>A link to the precise CV version sent for that role. Every role gets its own.</span></li>
+        <li><b>Cover letter</b><span>A link to the letter written for that company.</span></li>
+        <li><b>Site</b><span>The board or portal it was submitted through.</span></li>
+        <li><b>Company</b><span>Who received it — so you never apply to the same firm twice by accident.</span></li>
+      </ul>
+      <div class="hero-cta"><a class="btn btn-ghost" href="#start">Get your own sheet →</a></div>
+    </div>
+
+    <div class="sheet">
+      <div class="sheet-bar">
+        <span class="sheet-name">📋 Your_Name.xlsx</span>
+        <span class="live"><span class="blip"></span>Shared with you</span>
+      </div>
+      <div class="sheet-scroll">
+        <table>
+          <thead><tr><th>Name</th><th>Job</th><th>Date</th><th>Resume used</th><th>Cover letter</th><th>Site</th></tr></thead>
+          <tbody>
+            <tr><td class="dim">You</td><td>Delivery Manager</td><td class="dim">19/06/26</td><td><a href="#start">drive.google/…6XJi</a></td><td><a href="#start">drive.google/…kL2p</a></td><td class="dim">Workable</td></tr>
+            <tr><td class="dim">You</td><td>Delivery Lead</td><td class="dim">19/06/26</td><td><a href="#start">drive.google/…VM1B</a></td><td><a href="#start">drive.google/…9Qxr</a></td><td class="dim">Greenhouse</td></tr>
+            <tr><td class="dim">You</td><td>Agile Delivery Lead</td><td class="dim">19/06/26</td><td><a href="#start">drive.google/…VYQ2</a></td><td><a href="#start">drive.google/…3Fga</a></td><td class="dim">LinkedIn</td></tr>
+            <tr><td class="dim">You</td><td>Change Manager</td><td class="dim">21/06/26</td><td><a href="#start">drive.google/…WhagTPV</a></td><td><a href="#start">drive.google/…7Tzm</a></td><td class="dim">Careers site</td></tr>
+            <tr><td class="dim">You</td><td>Data Delivery Manager</td><td class="dim">21/06/26</td><td><a href="#start">drive.google/…C8ROG</a></td><td><a href="#start">drive.google/…Bd4k</a></td><td class="dim">Indeed</td></tr>
+            <tr><td class="dim">You</td><td>Delivery Consultant</td><td class="dim">21/06/26</td><td><a href="#start">drive.google/…1cQFe</a></td><td><a href="#start">drive.google/…Yn8v</a></td><td class="dim">Reply</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sheet-foot">Every row is openable. Every link is the real file we sent.</div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== HOW ===== -->
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">The process</p>
+    <h2>Four steps.<br><em>One of them is yours.</em></h2>
+    <p class="sec-lede">Onboarding takes about fifteen minutes. After that, your only job is showing up to the calls.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <span class="who">You · 15 minutes</span>
+        <h3>Brief us once</h3>
+        <p>Send your current CV and tell us the titles, industries, locations and boards you want covered — plus anything to avoid.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <span class="who">Us · daily</span>
+        <h3>We build and submit</h3>
+        <p>We find matching roles, write a CV and cover letter for each one, and submit them through the employer's own portal.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <span class="who">Us · every row</span>
+        <h3>We log it</h3>
+        <p>Company, role, date, CV link, letter link, board. Your sheet updates as we go — no waiting for a weekly report.</p>
+      </div>
+      <div class="step you">
+        <span class="n">04</span>
+        <span class="who">You · the fun part</span>
+        <h3>You interview</h3>
+        <p>The one part nobody can do for you. We keep the pipeline full while you prepare for the calls that come in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing">
+  <div class="wrap">
+    <p class="eyebrow">Pricing</p>
+    <h2>$5 an application.<br><em>That's the whole model.</em></h2>
+    <p class="sec-lede">No subscription and no minimum commitment. You pay for applications submitted — nothing else.</p>
+
+    <div class="prices">
+      <div class="price">
+        <span class="tier">Single</span>
+        <div class="amt">$5</div>
+        <span class="per">per application</span>
+        <ul class="plist">
+          <li>CV written for that role</li>
+          <li>Fresh cover letter</li>
+          <li>Submitted for you</li>
+          <li>Logged in your sheet</li>
+        </ul>
+        <a class="btn btn-ghost buy" data-plan="single" href="#start">Try one</a>
+      </div>
+
+      <div class="price best">
+        <span class="flag">Most chosen</span>
+        <span class="tier">Bundle of 10</span>
+        <div class="amt">$45</div>
+        <span class="per">$4.50 each · save $5</span>
+        <ul class="plist">
+          <li>Everything in Single</li>
+          <li>Your own tracking sheet</li>
+          <li>Credits never expire</li>
+          <li>Pause or stop any time</li>
+        </ul>
+        <a class="btn buy" data-plan="ten" href="#start">Buy 10 applications</a>
+      </div>
+
+      <div class="price">
+        <span class="tier">Bundle of 20</span>
+        <div class="amt">$85</div>
+        <span class="per">$4.25 each · save $15</span>
+        <ul class="plist">
+          <li>Everything in Bundle of 10</li>
+          <li>Best rate per application</li>
+          <li>Weekly sheet summary</li>
+          <li>Priority on new postings</li>
+        </ul>
+        <a class="btn btn-ghost buy" data-plan="twenty" href="#start">Buy 20 applications</a>
+      </div>
+    </div>
+
+    <p class="fine">Payment is due per application submitted, or per bundle purchased in advance. Unused bundle credits carry no expiry, and you may pause or stop the service at any time. <strong style="color:var(--chalk)">ApplyRight does not guarantee interviews or job offers</strong> — it guarantees tailored, properly submitted, fully logged applications.</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== STORIES ===== -->
+<section id="stories">
+  <div class="wrap">
+    <p class="eyebrow">Success stories</p>
+    <h2>People who stopped applying<br><em>and started interviewing</em></h2>
+    <p class="sec-lede">Real outcomes from real clients, published only with their permission.</p>
+    <div class="stories" id="stories-grid"></div>
+    <div class="placeholder-note">
+      ADMIN → Edit the <b>STORIES</b> list at the bottom of this file to publish a story. Add an image URL to <code>img</code> to show a screenshot (blur out names and emails first). Only publish with the client's written permission.
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">Ratings &amp; reviews</p>
+    <h2>Rate us honestly.<br><em>We publish it either way.</em></h2>
+    <p class="sec-lede">Every review below comes from someone who actually paid for applications. Nothing is filtered for being unflattering.</p>
+
+    <div class="rate-head">
+      <div>
+        <div class="big-score" id="avg">—</div>
+        <div class="stars" id="avg-stars"></div>
+      </div>
+      <div>
+        <div class="rate-meta" id="count">No reviews yet</div>
+        <div class="rate-meta" style="color:var(--mist);margin-top:6px">Out of 5 · from paying clients</div>
+      </div>
+      <a class="btn btn-ghost" href="#leave">Leave a review</a>
+    </div>
+
+    <div class="reviews" id="reviews-grid"></div>
+
+    <!-- leave a review -->
+    <div class="formcard" id="leave">
+      <p class="eyebrow">Leave a review</p>
+      <h2 style="font-size:clamp(24px,3vw,34px);margin-bottom:22px">Tell us how we did</h2>
+      <form id="reviewform" novalidate>
+        <div class="fgrid">
+          <div class="field">
+            <label for="r-name">Your name</label>
+            <input id="r-name" type="text" placeholder="First name is fine">
+          </div>
+          <div class="field">
+            <label for="r-role">Role you were applying for</label>
+            <input id="r-role" type="text" placeholder="e.g. Delivery Manager, UK">
+          </div>
+          <div class="field full">
+            <label id="starlabel">Your rating</label>
+            <div class="starpick" id="starpick" role="radiogroup" aria-labelledby="starlabel"></div>
+          </div>
+          <div class="field full">
+            <label for="r-text">Your review</label>
+            <textarea id="r-text" placeholder="What did we get right? What should we fix?"></textarea>
+          </div>
+        </div>
+        <div class="fform">
+          <button class="btn" type="submit">Send review</button>
+          <p class="fmsg" id="r-msg">Opens your email app. We publish reviews as sent — good or bad.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== TEAM ===== -->
+<section id="team">
+  <div class="wrap">
+    <p class="eyebrow">Who does the work</p>
+    <h2>Four people.<br><em>Not a bot farm.</em></h2>
+    <p class="sec-lede">Every CV is written by a named human and checked before it goes out. You'll know exactly who is working your account, and you can message them directly.</p>
+
+    <!-- ▼ EDIT roles and job descriptions below to match reality ▼ -->
+    <div class="team">
+      <div class="person">
+        <div class="avatar">JP</div>
+        <span class="role">Founder · CV &amp; applications lead</span>
+        <h3>Jideofor Peter</h3>
+        <p class="does">Writes the CVs, runs the submissions, and owns your tracking sheet. First point of contact for new clients and bundles.</p>
+        <a class="num" href="tel:+2348126107925">+234 812 610 7925</a>
+        <a class="num" href="mailto:peter4you58@gmail.com">peter4you58@gmail.com</a>
+        <a class="btn btn-wa" href="https://wa.me/2348126107925?text=Hi%20Peter%2C%20I%27d%20like%20to%20start%20with%20ApplyRight." target="_blank" rel="noopener">WhatsApp Peter</a>
+      </div>
+      <div class="person">
+        <div class="avatar">JC</div>
+        <span class="role">Assistant · CVs &amp; submissions</span>
+        <h3>Jideofor Chika</h3>
+        <p class="does">Works alongside Peter on tailoring CVs and cover letters to each job description, and submitting them through employer portals.</p>
+        <a class="num" href="tel:+2349042320096">+234 904 232 0096</a>
+        <a class="btn btn-wa" href="https://wa.me/2349042320096?text=Hi%20Chika%2C%20I%27d%20like%20to%20start%20with%20ApplyRight." target="_blank" rel="noopener">WhatsApp Chika</a>
+      </div>
+      <div class="person">
+        <div class="avatar">N</div>
+        <span class="role">Client support</span>
+        <h3>Noble</h3>
+        <p class="does">Answers questions about your account and your tracking sheet, and keeps you updated on what's gone out.</p>
+        <a class="num" href="tel:+2348064246830">+234 806 424 6830</a>
+        <a class="btn btn-wa" href="https://wa.me/2348064246830?text=Hi%20Noble%2C%20I%27d%20like%20to%20start%20with%20ApplyRight." target="_blank" rel="noopener">WhatsApp Noble</a>
+      </div>
+      <div class="person">
+        <div class="avatar">P</div>
+        <span class="role">Client support</span>
+        <h3>Precious</h3>
+        <p class="does">Handles onboarding for new clients, plus anything to do with bundles, credits or payments.</p>
+        <a class="num" href="tel:+2347043909852">+234 704 390 9852</a>
+        <a class="btn btn-wa" href="https://wa.me/2347043909852?text=Hi%20Precious%2C%20I%27d%20like%20to%20start%20with%20ApplyRight." target="_blank" rel="noopener">WhatsApp Precious</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== START ===== -->
+<section id="start">
+  <div class="wrap">
+    <p class="eyebrow">Get started</p>
+    <h2>Send your CV<br><em>and your targets</em></h2>
+    <p class="sec-lede">Fill this in and your email app opens with everything written out — attach your CV and send. We reply within one working day. Prefer WhatsApp? Message any of the team above.</p>
+
+    <div class="formcard">
+      <form id="intake" novalidate>
+        <div class="fgrid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="country">Where you're based</label>
+            <select id="country">
+              <option>United Kingdom</option><option>United States</option><option>Canada</option>
+              <option>Ireland</option><option>Australia</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bundle">What you want</label>
+            <select id="bundle">
+              <option>Single application — $5</option>
+              <option>Bundle of 10 — $45</option>
+              <option>Bundle of 20 — $85</option>
+              <option>Not sure yet, let's talk</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="titles">Job titles you're targeting</label>
+            <input id="titles" type="text" placeholder="e.g. Delivery Manager, Scrum Master, Agile Delivery Lead">
+          </div>
+          <div class="field full">
+            <label for="boards">Boards or employers to cover</label>
+            <input id="boards" type="text" placeholder="e.g. LinkedIn, Indeed UK, Workable, specific careers pages">
+          </div>
+          <div class="field full">
+            <label for="notes">Anything we should know</label>
+            <textarea id="notes" placeholder="Salary range, notice period, work authorisation, companies to avoid, cities you'd relocate to…"></textarea>
+          </div>
+        </div>
+        <div class="fform">
+          <button class="btn" type="submit">Open my email and send →</button>
+          <p class="fmsg" id="i-msg">Attach your CV in the email that opens. We never invent experience you don't have.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2>Before you send<br><em>anything</em></h2>
+    <div style="margin-top:34px">
+      <details open>
+        <summary>Will you put things on my CV that aren't true?</summary>
+        <p>No. Everything comes from what you give us and stays true to your actual experience. We change emphasis, wording and ordering to match the job description — never the facts. If a role needs something you don't have, we tell you rather than inventing it.</p>
+      </details>
+      <details>
+        <summary>Do you guarantee interviews?</summary>
+        <p>No — and be careful with anyone who does. What's guaranteed is a properly tailored application, submitted to the role you asked for, with a logged row proving it. The interview is between you and the employer.</p>
+      </details>
+      <details>
+        <summary>How do I know the applications were really sent?</summary>
+        <p>Two ways. Your sheet has a row for every one, with the exact CV and cover letter we used. And most employers send their own automatic confirmation straight to your inbox — so you can verify us against a source we don't control.</p>
+      </details>
+      <details>
+        <summary>Do you apply to roles I wouldn't want?</summary>
+        <p>Only what matches the criteria you set — titles, industries, locations, salary floor, and your avoid list. Anything borderline, we ask first.</p>
+      </details>
+      <details>
+        <summary>Will employers know someone else applied for me?</summary>
+        <p>The application is submitted from your details and in your name, with your permission — this is the same arrangement as a recruiter acting on your behalf. Everything we write, you can read before or after it goes out.</p>
+      </details>
+      <details>
+        <summary>How do I pay from the UK, US or Canada?</summary>
+        <p>Card, PayPal or bank transfer, invoiced in USD. Bundles are paid in advance; singles are billed for what's been submitted. No card is stored and there is no recurring charge.</p>
+      </details>
+      <details>
+        <summary>Can I stop?</summary>
+        <p>Any time, with no notice. Unused bundle credits don't expire, so they'll be waiting if you come back.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgridf">
+      <div>
+        <div class="footlogo">ApplyRight</div>
+        <p style="color:var(--mist);font-size:14.5px;max-width:34ch">Done-for-you job applications for candidates in the UK, US and Canada. Written, submitted, and logged in a sheet you can open.</p>
+      </div>
+      <div>
+        <h4>Service</h4>
+        <a href="#included">What you get</a>
+        <a href="#tracker">The tracker</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div>
+        <h4>Proof</h4>
+        <a href="#stories">Success stories</a>
+        <a href="#reviews">Ratings &amp; reviews</a>
+        <a href="#leave">Leave a review</a>
+        <a href="#faq">Questions</a>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <a href="mailto:peter4you58@gmail.com">peter4you58@gmail.com</a>
+        <a href="https://wa.me/2348126107925" target="_blank" rel="noopener">Peter · +234 812 610 7925</a>
+        <a href="https://wa.me/2349042320096" target="_blank" rel="noopener">Chika · +234 904 232 0096</a>
+        <a href="https://wa.me/2348064246830" target="_blank" rel="noopener">Noble · +234 806 424 6830</a>
+        <a href="https://wa.me/2347043909852" target="_blank" rel="noopener">Precious · +234 704 390 9852</a>
+      </div>
+    </div>
+    <div class="footbar">
+      <span>© <span id="yr">2026</span> ApplyRight — every application truthful to your real experience.</span>
+      <span>No interview or offer is guaranteed.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wafloat" href="https://wa.me/2348126107925?text=Hi%20ApplyRight%2C%20I%27d%20like%20to%20get%20started." target="_blank" rel="noopener" aria-label="Message ApplyRight on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.3zM12 2A10 10 0 0 0 3.5 17.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   ADMIN — EDIT BELOW
+   ============================================================ */
+
+// Where enquiries and reviews are emailed to:
+var CONTACT_EMAIL = 'peter4you58@gmail.com';
+
+// Your WhatsApp number, digits only, with country code, no + sign:
+var SALES_WHATSAPP = '2348126107925';
+
+// ---- PAYMENT LINKS ---------------------------------------
+// Leave these empty ('') and the Buy buttons open WhatsApp with the
+// order pre-written — good enough to start selling today.
+// Once you have Paystack or Stripe payment links, paste them in here
+// and the buttons switch to card checkout automatically. Nothing else changes.
+var PAY_LINKS = {
+  single: '',   // ← $5   single application
+  ten:    '',   // ← $45  bundle of 10
+  twenty: ''    // ← $85  bundle of 20
+};
+
+var PLAN_NAMES = {
+  single: 'a single application ($5)',
+  ten:    'the 10-application bundle ($45)',
+  twenty: 'the 20-application bundle ($85)'
+};
+
+// ---- SUCCESS STORIES -------------------------------------
+// Replace these placeholders with real client outcomes.
+// Publish ONLY with the client's written permission.
+// img: paste an image URL (blur out names/emails first), or leave ''.
+var STORIES = [
+  { win:'Placeholder story', quote:'Replace this text with what the client actually told you. Do not write it for them.', who:'Client name · Role · Country', img:'' },
+  { win:'Placeholder story', quote:'Replace this text with what the client actually told you. Do not write it for them.', who:'Client name · Role · Country', img:'' },
+  { win:'Placeholder story', quote:'Replace this text with what the client actually told you. Do not write it for them.', who:'Client name · Role · Country', img:'' }
+];
+
+// ---- REVIEWS ---------------------------------------------
+// Paste in reviews you actually receive. The score below
+// recalculates automatically. Leave the array empty ( [] )
+// until you have real ones — an honest empty state beats a fake five.
+var REVIEWS = [
+  // { stars:5, text:'Their words, pasted exactly.', by:'First name · Role · Country' },
+];
+
+/* ============================================================
+   No need to edit below this line
+   ============================================================ */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// buy buttons → payment link if set, otherwise a pre-written WhatsApp order
+[].forEach.call(document.querySelectorAll('.buy'), function(a){
+  var plan = a.dataset.plan;
+  if (PAY_LINKS[plan]) {
+    a.href = PAY_LINKS[plan];
+    a.target = '_blank';
+    a.rel = 'noopener';
+  } else {
+    a.href = 'https://wa.me/' + SALES_WHATSAPP + '?text=' +
+      encodeURIComponent("Hi ApplyRight, I'd like to buy " + PLAN_NAMES[plan] +
+        ". How do I pay?");
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+});
+
+function starRow(n){
+  var s='';
+  for(var i=1;i<=5;i++){ s += i<=n ? '★' : '<span class="off">★</span>'; }
+  return s;
+}
+
+// stories
+(function(){
+  var g = document.getElementById('stories-grid');
+  g.innerHTML = STORIES.map(function(s){
+    var media = s.img
+      ? '<img class="shot" src="'+s.img+'" alt="">'
+      : '<div class="noshot">Add a screenshot</div>';
+    return '<article class="story">'+media+
+      '<div class="story-body">'+
+        '<div class="win">'+s.win+'</div>'+
+        '<p class="q">'+s.quote+'</p>'+
+        '<div class="who">'+s.who+'</div>'+
+      '</div></article>';
+  }).join('');
+})();
+
+// reviews + rating
+(function(){
+  var g=document.getElementById('reviews-grid'),
+      avg=document.getElementById('avg'),
+      stars=document.getElementById('avg-stars'),
+      count=document.getElementById('count');
+
+  if(!REVIEWS.length){
+    g.innerHTML='<div class="empty" style="grid-column:1/-1">No reviews published yet. Be the first — we publish them exactly as written.</div>';
+    avg.textContent='—';
+    stars.innerHTML=starRow(0);
+    count.textContent='No reviews yet';
+    return;
+  }
+  var total=REVIEWS.reduce(function(a,r){return a+r.stars;},0);
+  var mean=total/REVIEWS.length;
+  avg.textContent=mean.toFixed(1);
+  stars.innerHTML=starRow(Math.round(mean));
+  count.textContent=REVIEWS.length+(REVIEWS.length===1?' review':' reviews');
+  g.innerHTML=REVIEWS.map(function(r){
+    return '<article class="review"><div class="stars">'+starRow(r.stars)+'</div>'+
+      '<p>'+r.text+'</p><div class="by">'+r.by+'</div></article>';
+  }).join('');
+})();
+
+// star picker
+var picked=0;
+(function(){
+  var p=document.getElementById('starpick');
+  for(var i=1;i<=5;i++){
+    var b=document.createElement('button');
+    b.type='button'; b.textContent='★'; b.dataset.v=i;
+    b.setAttribute('aria-label',i+' star'+(i>1?'s':''));
+    p.appendChild(b);
+  }
+  p.addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON') return;
+    picked=+e.target.dataset.v;
+    [].forEach.call(p.children,function(b){ b.classList.toggle('on', +b.dataset.v<=picked); });
+  });
+})();
+
+function mailto(subject, body){
+  window.location.href='mailto:'+CONTACT_EMAIL+
+    '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+}
+
+// review submit
+document.getElementById('reviewform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var msg=document.getElementById('r-msg');
+  var name=document.getElementById('r-name').value.trim();
+  var text=document.getElementById('r-text').value.trim();
+  if(!picked || !text){
+    msg.textContent='Pick a star rating and write a line or two, then send.';
+    msg.classList.add('bad'); return;
+  }
+  msg.classList.remove('bad');
+  mailto('ApplyRight review — '+picked+'/5 from '+(name||'a client'),
+    'Rating: '+picked+'/5\nName: '+(name||'—')+
+    '\nRole applied for: '+(document.getElementById('r-role').value.trim()||'—')+
+    '\n\nReview:\n'+text);
+  msg.textContent='Your email app is open — send it and we\'ll publish it.';
+});
+
+// intake submit
+document.getElementById('intake').addEventListener('submit',function(e){
+  e.preventDefault();
+  var msg=document.getElementById('i-msg');
+  var name=document.getElementById('name').value.trim();
+  var email=document.getElementById('email').value.trim();
+  if(!name || !/^\S+@\S+\.\S+$/.test(email)){
+    msg.textContent='Add your name and a valid email so we can reply.';
+    msg.classList.add('bad');
+    (!name?document.getElementById('name'):document.getElementById('email')).focus();
+    return;
+  }
+  msg.classList.remove('bad');
+  mailto('ApplyRight enquiry — '+name,
+    'Name: '+name+
+    '\nEmail: '+email+
+    '\nBased in: '+document.getElementById('country').value+
+    '\nWants: '+document.getElementById('bundle').value+
+    '\n\nTarget job titles:\n'+(document.getElementById('titles').value.trim()||'—')+
+    '\n\nBoards / employers:\n'+(document.getElementById('boards').value.trim()||'—')+
+    '\n\nNotes:\n'+(document.getElementById('notes').value.trim()||'—')+
+    '\n\n--- PLEASE ATTACH YOUR CV BEFORE SENDING ---');
+  msg.textContent='Your email app is open. Attach your CV, then send.';
+});
+</script>
+</body>
+</html>
